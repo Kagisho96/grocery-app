@@ -1,0 +1,41 @@
+
+rder: 1px solid red;
+    padding: .5rem;
+        margin-left:  5rem;
+	    margin-top: .5rem;
+	        border-width: thick;
+		    border-radius: 5%;
+		        width: 20%;
+			    height: 20%;
+		    }
+
+		    .normal {
+			        border: 1px solid blue;
+				    margin-left: 5rem;
+				        margin-top: .5rem;
+					    padding: .5rem;
+					        border-width: 100%;
+						    border-radius: 5%;
+						        width: 20%;
+							    height: 20%;
+							        border-width: thick;
+
+							}
+							.heading{
+								    text-align: center;
+								        align-items: center;
+								}
+								.note{
+									    
+									    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+									        background-image: linear-gradient(solid red);
+										    color: rgb(29, 2, 2);
+										        box-shadow: -3px -3px 7px #c40101b2, 3px 3px 5px #00000088;
+											    
+										}
+										h1{
+											    text-align: center;
+										    }
+										    .answers{
+											        color: firebrick;
+											}
