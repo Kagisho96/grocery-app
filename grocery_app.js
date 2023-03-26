@@ -146,7 +146,7 @@ item.map((item)=> {
         <p> Answer. The customer will pay R${withoutDiscount} if she/he has No discount and he/she will pay  R${withDiscount} if have discount.</p>
         <hr>
         <p>3. Each and every item which is on promotion attracts an additional 10% discount. calculate how much discount will be applied to the basket.</p>
-        <p>Answer. The discount will be applied to the basket is R${item.discountOnBasket}</p>
+        <p>Answer. The discount will be applied to the basket is R${discountOnBasket}</p>
         
         
     </div>`;
