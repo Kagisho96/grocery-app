@@ -91,11 +91,9 @@ for (let i=0; i<item.length; i++){
     
     
     if(item[i].discount>0){
-        item[i]["sum"]=(item[i].discount/100)+item[i].price
-        item[i]["diff"]=item[i].price-(item[i].discount/100)
+        item[i]["priceDiscounted"]=item[i].price-(item[i].discount/100)
     }else{
         item[i]["sum"]= item[i]["price"]
-        item[i]["diff"]=item[i]["price"]
     }
 
 
@@ -106,7 +104,7 @@ for (let i=0; i<item.length; i++){
     }
 
     if(item[i].promo===true){
-      discountOnBasket += item[i].onPromo
+      discountOnBasket += item[i].onPromo*100
   }else{
       item[i]["onPromo"]="There's not promotion"
   }
@@ -135,8 +133,7 @@ item.map((item)=> {
         <p>Price: R${item.price}</p>
         <p>Discount: ${item.discount}%</p>
         <p>Promo: ${item.promo}</p>
-        <p>Sum: R${item.sum}</p>
-        <p>Difference: R${item.diff}</p>
+        <p>Price discounted: R${item.priceDiscounted}</p>
         <p>On promo: ${item.onPromo}</p>
         <hr>
         <p> 1. If an item has a discount, calculate how much a customer will pay for the item at the till.</p>
@@ -146,7 +143,7 @@ item.map((item)=> {
         <p> Answer. The customer will pay R${withoutDiscount} if she/he has No discount and he/she will pay  R${withDiscount} if have discount.</p>
         <hr>
         <p>3. Each and every item which is on promotion attracts an additional 10% discount. calculate how much discount will be applied to the basket.</p>
-        <p>Answer. The discount will be applied to the basket is R${discountOnBasket}</p>
+        <p>Answer. The discount will be applied to the basket is ${discountOnBasket}%</p>
         
         
     </div>`;
