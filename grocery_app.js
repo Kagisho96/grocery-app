@@ -140,7 +140,7 @@ item.map((item)=> {
         <p> Answer. This customer will pay R${item.sum} at the till.</p>
         <hr>
         <p>2. Calculate the difference in price (or total amount of money) this customer would have paid if he/she had no discound and when he has the discounts.</p>
-        <p> Answer. The customer will pay R${withoutDiscount} if she/he has No discount and he/she will pay  R${withDiscount} if have discount.</p>
+         <p> Answer. The customer will pay R${withoutDiscount} if she/he has No discount and he/she will pay  R${withDiscount} if have discount.</p>
         <hr>
         <p>3. Each and every item which is on promotion attracts an additional 10% discount. calculate how much discount will be applied to the basket.</p>
         <p>Answer. The discount will be applied to the basket is ${discountOnBasket}%</p>
