@@ -1,5 +1,4 @@
 
-
 const item = [
   {
     promo: true,
@@ -55,6 +54,7 @@ const item = [
     discount: 0,
     price: 80,
     item:"milk"
+
   },
    {
     promo: true,
@@ -76,6 +76,8 @@ const item = [
   },
 ];
 
+
+
 withDiscount = 0
 withoutDiscount = 0
 discountOnBasket = 0
@@ -93,14 +95,14 @@ for (let i=0; i<item.length; i++){
     if(item[i].discount>0){
         item[i]["priceDiscounted"]=item[i].price-(item[i].discount/100)
     }else{
-        item[i]["sum"]= item[i]["price"]
+        item[i]["priceDiscounted"]= "No discount"
     }
 
 
     if(item[i].discount>0){
-      withDiscount += item[i].sum
+      withDiscount += item[i].price
     }else{
-      withoutDiscount += item[i].sum
+      withoutDiscount += item[i].price
     }
 
     if(item[i].promo===true){
@@ -127,34 +129,18 @@ item.map((item)=> {
 
     basketDiv.innerHTML += `<div class="${
       item.promo && item.discount > 0 ? "red" : "normal" 
-
     }">
+        <hr>
         <p>Item: ${item.item}</p>
         <p>Price: R${item.price}</p>
         <p>Discount: ${item.discount}%</p>
         <p>Promo: ${item.promo}</p>
-        <p>Price discounted: R${item.priceDiscounted}</p>
-        <p>On promo: ${item.onPromo}</p>
+        <p>Price discounted: ${item.priceDiscounted}</p>
+        <p>Sum with discount: R${withDiscount}</p>
+        <p>Sum without discount: R${withoutDiscount}</p>
+        <p>Discount applied: ${discountOnBasket}%</p>
         <hr>
-        <p> 1. If an item has a discount, calculate how much a customer will pay for the item at the till.</p>
-        <p> Answer. This customer will pay R${item.sum} at the till.</p>
-        <hr>
-        <p>2. Calculate the difference in price (or total amount of money) this customer would have paid if he/she had no discound and when he has the discounts.</p>
-         <p> Answer. The customer will pay R${withoutDiscount} if she/he has No discount and he/she will pay  R${withDiscount} if have discount.</p>
-        <hr>
-        <p>3. Each and every item which is on promotion attracts an additional 10% discount. calculate how much discount will be applied to the basket.</p>
-        <p>Answer. The discount will be applied to the basket is ${discountOnBasket}%</p>
-        
         
     </div>`;
     
-})
-
-
-// var diffSum =item.reduce(function(Value1,Value2){
-//   return {
-//     totalAmount: Value1["item"][i]["diff"] + Value2["item"][i]["diff"] 
-//   }
-
-// });
-
+});
